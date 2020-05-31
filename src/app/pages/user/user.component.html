@@ -1,0 +1,14 @@
+<mat-card *ngIf="user">
+    <mat-card-content>
+        <div class="user">
+            <img class="avatar" [src]="user.data.avatar">
+            <p>{{ user.data.first_name + ' ' + user.data.last_name }}</p>
+        </div>
+        <div class="data">
+            <p><span class="material-icons">email</span> {{ user.data.email }}</p>
+            <a [href]="user.ad.url" target="_blank"><span class="material-icons">language</span> {{ user.ad.url }}</a>
+            <p><span class="material-icons">business</span> {{ user.ad.company }}</p>
+            <p>{{ user.ad.text }}</p>
+        </div>
+    </mat-card-content>
+</mat-card>
